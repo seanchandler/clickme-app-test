@@ -1,0 +1,28 @@
+group 'com.ex'
+version '1.0-SNAPSHOT'
+
+apply plugin: 'groovy'
+apply plugin: 'java'
+apply plugin: 'idea'
+
+sourceCompatibility = 1.8
+
+repositories {
+    jcenter()
+    mavenCentral()
+    maven {
+        url "http://repo.maven.apache.org/maven2"
+    }
+}
+
+dependencies {
+    compile 'org.codehaus.groovy:groovy-all:2.3.11'
+    testCompile 'junit:junit:4.12'
+    testCompile group: 'io.appium', name: 'java-client', version: '4.1.2'
+    testCompile('org.seleniumhq.selenium:selenium-java:2.53.1'){
+        exclude module: 'cglib'
+        exclude group: 'com.google.code.gson'
+    }
+    testCompile group: 'org.springframework', name: 'spring-core', version: '4.3.3.RELEASE'
+
+}
