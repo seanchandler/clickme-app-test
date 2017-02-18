@@ -19,10 +19,10 @@ dependencies {
     compile 'org.codehaus.groovy:groovy-all:2.3.11'
     testCompile 'junit:junit:4.12'
     testCompile group: 'io.appium', name: 'java-client', version: '4.1.2'
-    testCompile('org.seleniumhq.selenium:selenium-java:2.53.1'){
-        exclude module: 'cglib'
-        exclude group: 'com.google.code.gson'
-    }
+//    testCompile('org.seleniumhq.selenium:selenium-java:2.53.1'){
+//        exclude module: 'cglib'
+//        exclude group: 'com.google.code.gson'
+//    }
     testCompile group: 'org.springframework', name: 'spring-core', version: '4.3.3.RELEASE'
 
 }

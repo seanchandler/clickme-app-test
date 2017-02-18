@@ -11,7 +11,7 @@ import java.net.URL;
 public class Appium {
 
     private static String appiumHomeDir = System.getProperty("appium.home", "/usr/local/lib/node_modules/appium");
-    protected static AppiumDriverLocalService appium;
+    private static AppiumDriverLocalService appium;
 
 
     public static void start() {

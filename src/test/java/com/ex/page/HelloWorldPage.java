@@ -7,6 +7,7 @@ public interface HelloWorldPage extends PageObject {
 
     String getButtonText();
     void tapButton();
+    Boolean alertIsDisplayed();
     String getAlertText();
     void tapAlert();
 }

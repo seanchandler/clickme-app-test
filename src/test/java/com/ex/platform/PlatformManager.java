@@ -1,15 +1,14 @@
 package com.ex.platform;
 
 import org.eclipse.jetty.io.RuntimeIOException;
-import org.springframework.beans.factory.annotation.Value;
 
 /**
  * Created by sean on 10/12/16.
  */
 public class PlatformManager {
 
-    @Value("${app.platform}")
-    private static String platform = null;
+//    @Value("${app.platform}")
+    private static String platform = System.getProperty("app.platform");
 
     public static String getPlatform() {
         if (platform != null) {
