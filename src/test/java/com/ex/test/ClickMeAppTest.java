@@ -1,6 +1,6 @@
 package com.ex.test;
 
-import com.ex.page.HelloWorldPage;
+import com.ex.page.ClickMePage;
 import com.ex.page.PageFactory;
 import org.junit.Test;
 
@@ -12,15 +12,12 @@ public class ClickMeAppTest extends TestBase {
 
     @Test
     public void clickMeTest() throws Exception {
-        HelloWorldPage helloWorldPage = (HelloWorldPage) PageFactory.getPage("helloworld", driver);
+        ClickMePage helloWorldPage = (ClickMePage) PageFactory.getPage("clickMePage", driver);
         assertThat(helloWorldPage.getButtonText(), is(equalTo("Click Me")));
 
         helloWorldPage.tapButton();
         assertThat(helloWorldPage.alertIsDisplayed(), is(true));
         assertThat(helloWorldPage.getAlertText(), is(equalTo("Alert")));
-
-        helloWorldPage.tapAlert();
-        assertThat(helloWorldPage.alertIsDisplayed(), is(false));
     }
 
 }

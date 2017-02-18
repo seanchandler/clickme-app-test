@@ -5,8 +5,8 @@ import com.ex.capabilities.Capabilities;
 import com.ex.capabilities.IOSCapabilities;
 import com.ex.driver.Driver;
 import com.ex.driver.IOSAppiumDriver;
-import com.ex.page.HelloWorldPage;
-import com.ex.page.ios.IOSHelloWorldPage;
+import com.ex.page.ClickMePage;
+import com.ex.page.ios.IOSClickMePage;
 import io.appium.java_client.ios.IOSDriver;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
@@ -24,6 +24,6 @@ public class IOSConfig {
     public Capabilities getCapabilities() { return new IOSCapabilities(); }
 
     @Scope("prototype")
-    @Bean(name = "helloworld")
-    public HelloWorldPage getHelloWorldPage(IOSDriver driver) { return new IOSHelloWorldPage(driver); }
+    @Bean(name = "clickMePage")
+    public ClickMePage getHelloWorldPage(IOSDriver driver) { return new IOSClickMePage(driver); }
 }

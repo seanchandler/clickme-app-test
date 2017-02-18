@@ -1,22 +1,24 @@
-package com.ex.page.ios;
+package com.ex.page.android;
 
-import com.ex.page.HelloWorldPage;
+import com.ex.page.ClickMePage;
 import io.appium.java_client.MobileElement;
 import io.appium.java_client.ios.IOSDriver;
 import io.appium.java_client.pagefactory.AppiumFieldDecorator;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
-public class IOSHelloWorldPage implements HelloWorldPage {
+/**
+ * Created by sean on 10/12/16.
+ */
+public class AndroidClickMePage implements ClickMePage {
 
-
-    @FindBy(name = "Click Me")
+    @FindBy(name = "CLICK ME")
     MobileElement button;
 
-    @FindBy(name = "Alert")
+    @FindBy(name = "Hello World")
     MobileElement alert;
 
-    public IOSHelloWorldPage(IOSDriver driver) {
+    public AndroidClickMePage(IOSDriver driver) {
         PageFactory.initElements(new AppiumFieldDecorator(driver), this);
     }
 
@@ -45,3 +47,4 @@ public class IOSHelloWorldPage implements HelloWorldPage {
         alert.click();
     }
 }
+
