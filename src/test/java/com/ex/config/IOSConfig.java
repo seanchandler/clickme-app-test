@@ -25,5 +25,5 @@ public class IOSConfig {
 
     @Scope("prototype")
     @Bean(name = "clickMePage")
-    public ClickMePage getHelloWorldPage(IOSDriver driver) { return new IOSClickMePage(driver); }
+    public ClickMePage getClickMePage(IOSDriver driver) { return new IOSClickMePage(driver); }
 }
