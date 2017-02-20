@@ -7,12 +7,9 @@ import io.appium.java_client.MobileElement;
 import org.junit.After;
 import org.junit.Before;
 
-import java.util.logging.Logger;
-
 public class TestBase {
 
     protected AppiumDriver<MobileElement> driver;
-    protected Logger logger = Logger.getLogger(this.getClass().getName());
 
     @Before
     public void setup() {
