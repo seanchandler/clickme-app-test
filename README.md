@@ -26,9 +26,9 @@ Install the [Appium](https://github.com/appium/appium) Server.
 npm install appium -g
 ````
 
-MAC OS and Xcode is required for running the app on iOS simulator. Since running the iOS app on an iPhone requires a development license it's been excluded from the example's instructions.
+MAC OS and Xcode are required for running the app on iOS simulator. Since running the iOS app on an iPhone requires a development license it's been excluded from the example's instructions.
 
-Android SDK and `ANDROID_HOME` environment variable is required for android. Either an emulator or a real device wil be needed to load the app.
+Android SDK and `ANDROID_HOME` environment variable are required for android. Either an emulator or a real device wil be needed to load the app.
 
 Run the project tests from the command line
 
