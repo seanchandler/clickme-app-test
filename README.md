@@ -40,7 +40,7 @@ The test will manage starting and stopping the appium server and assumes appium 
 
 
 ## Options
-All command line options are java system properties and loaded passed with `-D `
+All command line options are java system properties and loaded with `-D `
 
 | options   |      descritopn      |  default | platform | required |
 |-----------|:---------------------|:--------:|:--------:|:---------|
