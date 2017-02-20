@@ -11,13 +11,14 @@ import java.net.URL;
 public class Appium {
 
     private static String appiumHomeDir = System.getProperty("appium.home", "/usr/local/lib/node_modules/appium");
+    private static String appiumLogLevel = System.getProperty("appium.logLevel", "debug");
     private static AppiumDriverLocalService appium;
 
 
     public static void start() {
         AppiumServiceBuilder builder = new AppiumServiceBuilder()
                 .withAppiumJS(new File( String.format("%s%s", appiumHomeDir, "/build/lib/main.js")))
-                .withArgument(GeneralServerFlag.LOG_LEVEL, "debug")
+                .withArgument(GeneralServerFlag.LOG_LEVEL, appiumLogLevel)
                 .usingAnyFreePort();
         appium = builder.build();
         appium.start();

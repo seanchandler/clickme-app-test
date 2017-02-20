@@ -12,7 +12,7 @@ SourceCode for the mobile app
 * [iOS](https://github.com/seanchandler/clickme-ios-app)
 * [Android](https://github.com/seanchandler/clickme-android-app)
 
-## Running the tests
+## Requirements
 
 Appium is a [node.js](https://github.com/nodejs) server and requires node to be installed, The easiest way to install is with [Homebrew](https://brew.sh/) (Mac OS)
 
@@ -20,16 +20,17 @@ Appium is a [node.js](https://github.com/nodejs) server and requires node to be 
 brew install node
 ````
 
-Install the [Appium](https://github.com/appium/appium) Server.
+Install the [Appium](https://github.com/appium/appium) server using [npm](https://www.npmjs.com/)
 
 ````bash
-npm install appium -g
+npm install -g appium
 ````
 
-MAC OS and Xcode are required for running the app on iOS simulator. Since running the iOS app on an iPhone requires a development license it's been excluded from the example's instructions.
+MAC OS and [Xcode](https://developer.apple.com/xcode/) are required for running the app on iOS simulator. Since running the iOS app on an iPhone requires a development license it's been excluded from the example's instructions.
 
-Android SDK and `ANDROID_HOME` environment variable are required for android. Either an emulator or a real device wil be needed to load the app.
+[Android SDK](https://developer.android.com) and `ANDROID_HOME` environment variable are required for android. Either an emulator or a real device wil be needed to load the app.
 
+## Running the tests
 Run the project tests from the command line
 
 ````bash
@@ -42,8 +43,9 @@ The test will manage starting and stopping the appium server and assumes appium 
 ## Options
 All command line options are java system properties and loaded with `-D `
 
-| options   |      descritopn      |  default | platform | required |
+| options   |      description      |  default | platform | required |
 |-----------|:---------------------|:--------:|:--------:|:---------|
 | app.platform | paltform to run tests on | | ios, android | yes |
 | appium.home |    location of appium   |  /usr/local/lib/node_modules/appium | ios, android | no |
+| appium.logLevel | appium --log-level | debug | ios, android | no |
 | android.avd | android emulator to launch before running tests  | | android | no |
