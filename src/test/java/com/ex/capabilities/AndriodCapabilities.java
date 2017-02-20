@@ -7,6 +7,9 @@ import org.openqa.selenium.remote.DesiredCapabilities;
 import java.io.File;
 
 public class AndriodCapabilities implements Capabilities {
+
+    private static String avd = System.getProperty("android.avd", "");
+
     @Override
     public DesiredCapabilities getCapabilities() {
 
@@ -15,7 +18,7 @@ public class AndriodCapabilities implements Capabilities {
         DesiredCapabilities capabilities = new DesiredCapabilities();
         capabilities.setCapability(MobileCapabilityType.DEVICE_NAME, "Android Emulator");
         capabilities.setCapability(MobileCapabilityType.APP, app.getAbsolutePath());
-        capabilities.setCapability(AndroidMobileCapabilityType.AVD, "nexus_4_api_25");
+        capabilities.setCapability(AndroidMobileCapabilityType.AVD, avd);
         return capabilities;
     }
 }
