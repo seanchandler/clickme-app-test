@@ -1,12 +1,10 @@
 package com.ex.page;
 
-
 import com.ex.context.SpringContextFactory;
 import io.appium.java_client.AppiumDriver;
 import org.springframework.context.ApplicationContext;
 
 public class PageFactory {
-
 
     private static ApplicationContext applicationContext = null;
 

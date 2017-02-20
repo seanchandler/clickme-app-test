@@ -9,7 +9,6 @@ import org.openqa.selenium.support.PageFactory;
 
 public class IOSClickMePage implements ClickMePage {
 
-
     @FindBy(name = "Click Me")
     MobileElement button;
 

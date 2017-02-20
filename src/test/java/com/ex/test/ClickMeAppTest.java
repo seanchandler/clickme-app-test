@@ -12,12 +12,12 @@ public class ClickMeAppTest extends TestBase {
 
     @Test
     public void clickMeTest() throws Exception {
-        ClickMePage helloWorldPage = (ClickMePage) PageFactory.getPage("clickMePage", driver);
-        assertThat(helloWorldPage.getButtonText(), is(equalTo("Click Me")));
+        ClickMePage clickMePage = (ClickMePage) PageFactory.getPage("clickMePage", driver);
+        assertThat(clickMePage.getButtonText(), is(equalTo("Click Me")));
 
-        helloWorldPage.tapButton();
-        assertThat(helloWorldPage.alertIsDisplayed(), is(true));
-        assertThat(helloWorldPage.getAlertText(), is(equalTo("Alert")));
+        clickMePage.tapButton();
+        assertThat(clickMePage.alertIsDisplayed(), is(true));
+        assertThat(clickMePage.getAlertText(), is(equalTo("Alert")));
     }
 
 }

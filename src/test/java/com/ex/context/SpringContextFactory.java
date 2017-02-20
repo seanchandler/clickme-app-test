@@ -6,9 +6,6 @@ import com.ex.platform.PlatformManager;
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.annotation.AnnotationConfigApplicationContext;
 
-/**
- * Created by sean on 10/12/16.
- */
 public class SpringContextFactory {
 
     private static ApplicationContext applicationContext = null;

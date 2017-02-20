@@ -7,7 +7,8 @@ import com.ex.driver.AndroidAppiumDriver;
 import com.ex.driver.Driver;
 import com.ex.page.ClickMePage;
 import com.ex.page.android.AndroidClickMePage;
-import io.appium.java_client.ios.IOSDriver;
+import io.appium.java_client.MobileElement;
+import io.appium.java_client.android.AndroidDriver;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.context.annotation.Scope;
@@ -25,5 +26,5 @@ public class AndroidConfig {
 
     @Scope("prototype")
     @Bean(name = "clickMePage")
-    public ClickMePage getClickMePage(IOSDriver driver) { return new AndroidClickMePage(driver); }
+    public ClickMePage getClickMePage(AndroidDriver<MobileElement> driver) { return new AndroidClickMePage(driver); }
 }

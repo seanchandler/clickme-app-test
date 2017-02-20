@@ -1,6 +1,5 @@
 package com.ex.platform;
 
-
 public class PlatformManager {
 
     private static String platform = System.getProperty("app.platform");

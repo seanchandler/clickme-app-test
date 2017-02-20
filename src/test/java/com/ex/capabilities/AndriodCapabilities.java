@@ -6,9 +6,6 @@ import org.openqa.selenium.remote.DesiredCapabilities;
 
 import java.io.File;
 
-/**
- * Created by sean on 10/12/16.
- */
 public class AndriodCapabilities implements Capabilities {
     @Override
     public DesiredCapabilities getCapabilities() {
@@ -18,7 +15,7 @@ public class AndriodCapabilities implements Capabilities {
         DesiredCapabilities capabilities = new DesiredCapabilities();
         capabilities.setCapability(MobileCapabilityType.DEVICE_NAME, "Android Emulator");
         capabilities.setCapability(MobileCapabilityType.APP, app.getAbsolutePath());
-        capabilities.setCapability(AndroidMobileCapabilityType.AVD, "Nexus_5_API_24");
+        capabilities.setCapability(AndroidMobileCapabilityType.AVD, "nexus_4_api_25");
         return capabilities;
     }
 }
